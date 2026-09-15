@@ -204,14 +204,14 @@
   <!-- HERO -->
   <section class="hero">
     <h1>You're in.<br><em>Welcome to the family.</em></h1>
-    <p class="sub">You just made one payment to protect your family's fitrah against media. For as long as the app runs. No renewals. No price increases. Alhamdulillah.</p>
+    <p class="sub">You are now a VIP member of the Fitrah Filter family. Your access is active for the year and your parenting toolkit just got a whole lot stronger. Alhamdulillah.</p>
   </section>
 
   <!-- CONFIRM STRIP -->
   <div class="confirm">
-    <div class="eyebrow">Lifetime Access — Confirmed</div>
-    <div class="price"><sup>$</sup>297 <span style="font-family:'Inter',sans-serif;font-size:1rem;font-weight:400;opacity:0.8;">one-time · never again</span></div>
-    <div class="note">For as long as the app runs — you will never be billed again. 🔒</div>
+    <div class="eyebrow">Yearly Promo Access — Confirmed</div>
+    <div class="price"><sup>$</sup>9 <span style="font-family:'Inter',sans-serif;font-size:1rem;font-weight:400;opacity:0.8;">welcome aboard</span></div>
+    <div class="note">Regular price is $29/month. You locked in at $9 for the whole year.</div>
   </div>
 
   <!-- STEPS -->
@@ -223,7 +223,7 @@
         <div class="step-num">1</div>
         <div>
           <h3>Create your account</h3>
-          <p>Use the same email you used at checkout — your lifetime access is tied to that email.</p>
+          <p>Use the same email you used at checkout to register inside the app.</p>
           <div style="margin-top:12px;">
             <a href="https://fitrahfilter.com/thrivecart-thank-you" target="_blank" style="display:inline-block;background:#1B6B5F;color:#fff;font-family:Inter,sans-serif;font-size:0.875rem;font-weight:600;padding:13px 24px;border-radius:10px;text-decoration:none;">Create Your Account &rarr;</a>
           </div>
@@ -234,7 +234,7 @@
         <div class="step-num">2</div>
         <div>
           <h3>Make your first search</h3>
-          <p>Search any show, book, game, or YouTube channel your children are watching right now. Your first Green, Amber, or Red result takes 3-5 minutes — and will likely tell you something you did not know.</p>
+          <p>Search any show, book, game, or YouTube channel your children are watching right now.</p>
         </div>
       </div>
 
@@ -251,11 +251,42 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 The Good Child</p>
+    <p>© 2026 Fitrah Filter</p>
   </footer>
 
   <script async src="//tinder.thrivecart.com/embed/v1/thrivecart.upsells.js"></script>
   <div class="thrivecart-custom-upsell-target" data-thrivecart-account="emansedcorner" data-thrivecart-product="5" data-thrivecart-v="v2"></div>
+
+
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    window.addEventListener('load', function() {
+      var duration = 3000;
+      var end = Date.now() + duration;
+      var colors = ['#1B6B5F', '#C9A84C', '#ffffff', '#2A9D8F'];
+
+      (function frame() {
+        confetti({
+          particleCount: 6,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: colors
+        });
+        confetti({
+          particleCount: 6,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: colors
+        });
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      }());
+    });
+  </script>
 
 </body>
 </html>
